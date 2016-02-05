@@ -3,6 +3,8 @@ Title: Image Quality Control for CellProfiler Data
 Version: 0.0.0.1
 Authors@R: person("Scott", "Warchal", email = "S.Warchal@sms.ed.ac.uk", role = c("aut", "cre"))
 Description: What the package does (one paragraph).
-Depends: R (>= 3.2.0)
+Depends:
+    R (>= 3.2.0)
 License: MIT
 LazyData: true
+RoxygenNote: 5.0.1
