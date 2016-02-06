@@ -21,7 +21,7 @@ defined as an outlier if it is beyond \code{sigma} median absolute
 deviations (MAD) from the vector median.
 }
 \examples{
-vals <- sample(c(rnorm(100), 10, 20, -4, -10))
+vals <- sample(c(rnorm(1000), rnorm(10, 10), rnorm(10, -5)))
 is_outlier <- hampel(vals)
 plot(vals, col = as.factor(is_outlier), pch = 20)
 }
