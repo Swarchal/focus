@@ -18,3 +18,17 @@ quality_matrix <- function(df, ...){
   return(qc_out)
   
 }
+
+
+#' The number of QC metrics the image fails
+#'
+#' Given a dataframe or matrix produced from \code{quality_matrix}
+#' \code{total outliers} will calculate the number of ImageQuality
+#' columns the image failed.
+#'
+#' @param x dataframe or matrix of outlier values. An outlier is a non-zero number.
+#'   \code{quality_matrix()} returns a useable dataframe for this.
+#'
+#' @export 
+
+total_outliers <- function(x) apply(as.matrix(x), 1, function(x) sum(abs(x)))
