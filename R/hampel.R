@@ -27,7 +27,7 @@ hampel <- function(v, sigma = 4){
   h_neg <- med_val - sigma * mad_val
   
   # initialise empty vector for loop
-  out <- vector(length = length(v))
+  out <- rep(0, length(v))
   
   # loop through values returning either -1, 0 or +1
   for (i in 1:length(v)){
@@ -35,7 +35,7 @@ hampel <- function(v, sigma = 4){
       out[i] <- 1
     } else if (v[i] < h_neg){
       out[i] <- -1
-    } else out[i] <- 0
+    }
   }
   
   return(out)
