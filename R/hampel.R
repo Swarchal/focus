@@ -20,9 +20,11 @@
 
 hampel <- function(v, sigma = 4, na.rm = TRUE){
   
+  if (na.rm) v <- na.omit(v)
+  
   # find median and mad value
-  med_val <- median(v, na.rm)
-  mad_val <- mad(v, na.rm)
+  med_val <- median(v)
+  mad_val <- mad(v)
   
   # calculate the upper and lower bounds
   h_pos <- med_val + sigma * mad_val
