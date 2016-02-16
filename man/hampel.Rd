@@ -4,12 +4,14 @@
 \alias{hampel}
 \title{Hampel test for outliers}
 \usage{
-hampel(v, sigma = 4)
+hampel(v, sigma = 4, na.rm = TRUE)
 }
 \arguments{
 \item{v}{numerical vector}
 
 \item{sigma}{+/- MAD values for the normal range}
+
+\item{na.rm}{Boolean, whether to remove NA values from median and mad calculations}
 }
 \value{
 A vector of numerical values. 0 denotes a normal value, -1 is an

@@ -6,6 +6,8 @@
 #'
 #' @param v numerical vector
 #' @param sigma +/- MAD values for the normal range
+#' @param na.rm Boolean, whether to remove NA values from median and mad calculations
+#'
 #' @return A vector of numerical values. 0 denotes a normal value, -1 is an
 #'  outlier below the threshold, 1 is an outlier above the threshold.
 #'
@@ -16,11 +18,11 @@
 #' plot(vals, col = as.factor(is_outlier), pch = 20)
 
 
-hampel <- function(v, sigma = 4){
+hampel <- function(v, sigma = 4, na.rm = TRUE){
   
   # find median and mad value
-  med_val <- median(v)
-  mad_val <- mad(v)
+  med_val <- median(v, na.rm)
+  mad_val <- mad(v, na.rm)
   
   # calculate the upper and lower bounds
   h_pos <- med_val + sigma * mad_val
