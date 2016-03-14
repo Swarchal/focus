@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/Swarchal/focus.svg?branch=master)](https://travis-ci.org/Swarchal/focus)
+[![codecov.io](https://codecov.io/github/Swarchal/focus/coverage.svg?branch=master)](https://codecov.io/github/Swarchal/focus?branch=master)
+
 focus
 =====
 
