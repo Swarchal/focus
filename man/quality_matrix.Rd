@@ -13,6 +13,6 @@ quality_matrix(df, ...)
 }
 \description{
 \code{quality_matrix} calls the hampel outlier test for ImageQuality
-columns in a dataframe.
+ in a dataframe.
 }
 
