@@ -8,7 +8,7 @@ x <- sample(x)
 
 test_that("hampel handles missing values as expected",{
     expect_error(hampel(c(1, 2, 3, 4, "string")))
-    expect_error(hampel(c(1,2,3,4,NA), na.rm = FALSE))
+    expect_equal(hampel(c(1,2,3,4,NA), na.rm = FALSE), NA)
 
     facs <- factor(c(1,2,3,4,5,6))
     expect_error(hampel(facs))
