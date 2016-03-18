@@ -30,17 +30,9 @@ hampel <- function(v, sigma = 4, na.rm = TRUE){
   h_pos <- med_val + sigma * mad_val
   h_neg <- med_val - sigma * mad_val
   
-  # initialise empty vector for loop
-  out <- rep(0, length(v))
-  
-  # loop through values returning either -1, 0 or +1
-  for (i in 1:length(v)){
-    if (v[i] > h_pos){
-      out[i] <- 1
-    } else if (v[i] < h_neg){
-      out[i] <- -1
-    }
-  }
+  # assign either, 1, -1 or 0
+  out <- ifelse(v > h_pos, 1,
+	    ifelse(v < h_neg, -1, 0))
   
   return(out)
 }
